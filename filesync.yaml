@@ -2,6 +2,8 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: filesync-webapp
+  labels:
+    app: filesync_webapp
   replicas: 1
   selector:
     matchLabels:
