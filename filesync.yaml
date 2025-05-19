@@ -3,9 +3,10 @@ kind: Deployment
 metadata:
   name: filesync-webapp
   labels:
-    app: filesync_webapp
-  replicas: 1
-  selector:
+    app: filesync-webapp
+spec:  # Move spec here
+  replicas: 1  # This should be under spec
+  selector:  # This should also be under spec
     matchLabels:
       app: filesync-webapp
   template:
